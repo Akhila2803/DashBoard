@@ -13,6 +13,4 @@ public interface CallHistoryRepository extends MongoRepository<CallHistory, Stri
     List<CallHistory> findByPhoneNumberOrderByDate(String phoneNumber);
 
     
-
-    
 }

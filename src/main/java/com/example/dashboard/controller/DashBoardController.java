@@ -176,14 +176,11 @@ public class DashBoardController {
         return textService.countTextsInOneHourIntervals();
     }
     @GetMapping("/average-call-duration")
-public double getAverageCallDuration() {
-    List<CallHistory> callHistoryList = callHistoryService.getAllCallHistories(); // Implement this method in your service
-    double averageDuration = CallHistoryAverageDurationCalculator.calculateAverageCallDuration(callHistoryList); // Use your calculation method
-    return Math.round(averageDuration);
-}
-
-    
-
+    public double getAverageCallDuration() {
+        List<CallHistory> callHistoryList = callHistoryService.getAllCallHistories(); // Implement this method in your service
+        double averageDuration = CallHistoryAverageDurationCalculator.calculateAverageCallDuration(callHistoryList); // Use your calculation method
+        return Math.round(averageDuration);
+    }
 }
 
 
